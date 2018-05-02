@@ -21,7 +21,7 @@ read_data <- function(data_name) {
 # save the data to a list
 data <- list()
 
-data$Descriptions <- read_data("Descriptions")
+data$Descriptions <- data.frame(read_excel('lapz-scorecard.xlsx', range=cell_cols("A:M"), sheet="Descriptions"))
 data$Poverty <- read_data("Poverty")
 data$Jobs <- read_data("Jobs")
 data$Permits <- read_data("Permits")
